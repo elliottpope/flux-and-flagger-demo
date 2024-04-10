@@ -16,3 +16,8 @@ KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster --config kind.yaml
 
 ### Bootstrap Flux
 
+**_NOTE_**: You'll need a GitHub Personal Access Token with `administration:write`, `contents:write`, `commit-status:write`, `metadata:read` on this repository
+
+```sh
+flux --context kind-flux-and-flagger-demo bootstrap github --owner elliottpope --path local --private --personal --read-write-key --reconcile --repository flux-and-flagger-demo --branch main --components-extra image-automation-controller,image-reflector-controller 
+```
