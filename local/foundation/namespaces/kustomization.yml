@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - cert-manager.yml
 - linkerd.yml
+- prom-stack.yml
