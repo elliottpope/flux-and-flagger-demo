@@ -12,7 +12,7 @@ spec:
   prune: true
   dependsOn:
   - name: linkerd-crds
-  - name: linkerd-trust-anchor
+  - name: linkerd-identity-issuer
   sourceRef:
     kind: GitRepository
     name: flux-system
