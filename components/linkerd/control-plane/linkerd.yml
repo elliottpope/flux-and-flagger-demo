@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: linkerd-control-plane
+spec:
+  chart:
+    spec:
+      chart: linkerd-control-plane
+      sourceRef:
+        kind: HelmRepository
+        name: linkerd
+      version: '>= 1.16.11'
+  interval: 1m0s
+  values:
+    controllerLogFormat: json
+    controllerLogLevel: warn
+    identity:
+      externalCA: true
+      issuer:
+        scheme: kubernetes.io/tls
