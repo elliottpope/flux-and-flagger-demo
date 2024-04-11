@@ -5,3 +5,4 @@ resources:
 - root.yml
 - issuer.yml
 - identity.yml
+- trust-anchor.yml
