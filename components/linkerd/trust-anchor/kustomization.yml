@@ -4,5 +4,4 @@ kind: Kustomization
 resources:
 - root.yml
 - issuer.yml
-- trust-anchor.yml
 - identity.yml
